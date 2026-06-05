@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROYECTO 2000X </title>
+    <title>CYBERNETIC PORTAL</title>
     <style>
-        
+        /* --- ESTILOS FUTURISTAS & ELEVADOS --- */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -13,222 +13,186 @@
         }
 
         body {
-            background-color: #1a1a1a; /* Fondo oscuro industrial */
-            background-image: linear-gradient(#222 1px, transparent 1px), linear-gradient(90deg, #222 1px, transparent 1px);
-            background-size: 20px 20px; /* Efecto cuadrícula de fondo */
-            font-family: "Impact", "Arial Black", sans-serif; 
-            color: #dddddd;
-            font-size: 13px;
+            background-color: #000000; /* Negro absoluto */
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            color: #ffffff;
+            overflow-x: hidden;
         }
 
-        p, li, span, div {
-            font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+        /* Contenedor central flotante y estilizado */
+        #main-frame {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
         }
 
-        /* CONTENEDOR */
-        #container {
-            width: 960px;
-            margin: 30px auto;
-            background-color: #0f0f0f; /* Negro absoluto de fondo interno */
-            border: 3px double #ff6600; /* Borde doble naranja oxidado */
-            box-shadow: 0px 0px 20px rgba(255, 102, 0, 0.2);
-        }
-
-        /* ENCABEZADO */
+        /* Encabezado elegante minimalista */
         header {
-            background: linear-gradient(to bottom, #2b2b2b 0%, #141414 50%, #050505 100%);
-            padding: 40px 25px;
-            border-bottom: 4px solid #ff6600;
-            position: relative;
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 1px solid #111111;
         }
 
         header h1 {
-            font-family: "Impact", sans-serif;
-            font-size: 48px;
-            color: #ffffff;
-            letter-spacing: 2px;
-            text-shadow: 3px 3px 0px #ff6600;
+            font-size: 36px;
+            font-weight: 300;
+            letter-spacing: 8px;
             text-transform: uppercase;
+            color: #ffffff;
+            text-shadow: 0 0 10px rgba(0, 242, 254, 0.3);
         }
 
         header p {
-            font-size: 12px;
-            color: #aaaaaa;
+            font-size: 11px;
+            letter-spacing: 4px;
+            color: #555555;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-top: 5px;
-            font-weight: bold;
+            margin-top: 10px;
         }
 
-        /*MENU*/
+        /* Barra de texto que pasa horizontalmente (Marquesina de datos) */
+        .ticker-wrap {
+            width: 100%;
+            background-color: #050505;
+            border-top: 1px solid #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+            overflow: hidden;
+            padding: 8px 0;
+            margin: 20px 0;
+        }
+
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            padding-left: 100%;
+            animation: marquee 25s linear infinite;
+        }
+
+        .ticker-item {
+            display: inline-block;
+            padding: 0 2rem;
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #00f2fe; /* Color Cian Neón futurista */
+        }
+
+        @keyframes marquee {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Menú Elegante de 3 pestañas */
         nav {
-            background: #1f1f1f;
-            border-bottom: 2px solid #333333;
+            margin: 30px 0;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-        }
-
-        nav ul li {
-            flex: 1;
-            text-align: center;
+            justify-content: center;
+            gap: 40px;
         }
 
         nav ul li a {
-            display: block;
-            padding: 14px 10px;
-            color: #ffffff;
-            font-family: "Impact", sans-serif;
-            font-size: 15px;
-            letter-spacing: 1px;
+            color: #888888;
             text-decoration: none;
+            font-size: 12px;
             text-transform: uppercase;
-            border-right: 1px solid #333333;
-            background: linear-gradient(to bottom, #2d2d2d 0%, #1b1b1b 100%);
-            transition: all 0.2s ease;
+            letter-spacing: 3px;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
         }
-
 
         nav ul li a:hover, nav ul li a.active {
-            background: #ff6600;
-            color: #000000;
-            text-shadow: none;
-            box-shadow: inset 0px 0px 8px rgba(0,0,0,0.5);
-        }
-
-
-        #main-wrapper {
-            display: flex;
-            background-color: #141414;
-        }
-
-        main {
-            flex: 1;
-            padding: 30px;
-            border-right: 2px dashed #2d2d2d;
-        }
-
-        aside {
-            width: 280px;
-            background-color: #0b0b0b;
-            padding: 30px 20px;
-        }
-
-
-        .post {
-            background: #111111;
-            border: 1px solid #333333;
-            border-left: 5px solid #ff6600; /* Detalle de bloque sólido a la izquierda */
-            padding: 20px;
-            margin-bottom: 25px;
-        }
-
-        .post h2 {
-            font-family: "Impact", sans-serif;
-            font-size: 22px;
             color: #ffffff;
-            letter-spacing: 1px;
-            margin-bottom: 5px;
+            border-bottom: 1px solid #00f2fe;
+        }
+
+        /* Área de contenido del Propósito */
+        main {
+            margin-top: 5px;
+        }
+
+        .content-block {
+            background: linear-gradient(135deg, #080808 0%, #030303 100%);
+            border: 1px solid #151515;
+            padding: 40px;
+            border-radius: 2px;
+            box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.02);
+        }
+
+        .content-block h2 {
+            font-size: 20px;
+            font-weight: 400;
+            letter-spacing: 4px;
+            color: #ffffff;
+            margin-bottom: 20px;
             text-transform: uppercase;
+            border-left: 2px solid #00f2fe;
+            padding-left: 15px;
         }
 
-        .post-meta {
-            font-size: 11px;
-            color: #ff6600; /* Naranja para datos de estado */
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-bottom: 15px;
-            letter-spacing: 0.5px;
-        }
-
-        .post p {
-            color: #cccccc;
-            line-height: 1.7;
-        }
-
-        .widget {
-            background: #161616;
-            border: 1px solid #2a2a2a;
-            margin-bottom: 25px;
-            padding: 15px;
-        }
-
-        .widget h3 {
-            font-family: "Impact", sans-serif;
-            background-color: #2d2d2d;
-            color: #ff6600;
-            font-size: 13px;
-            padding: 6px 10px;
-            margin: -15px -15px 15px -15px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            border-bottom: 1px solid #ff6600;
-        }
-
-        .widget p {
-            font-size: 12px;
+        .content-block p {
+            font-size: 14px;
+            line-height: 1.8;
             color: #aaaaaa;
-            line-height: 1.5;
+            font-weight: 300;
         }
 
+        /* Pie de página */
         footer {
-            background-color: #0a0a0a;
-            color: #666666;
             text-align: center;
-            padding: 20px;
-            font-size: 11px;
-            font-weight: bold;
+            padding: 60px 0 20px 0;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #333333;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border-top: 2px solid #222222;
         }
     </style>
 </head>
 <body>
 
-<div id="container">
+<div id="main-frame">
 
+    <!-- Encabezado Principal -->
     <header>
-        <h1>PROYECTO 2000E</h1>
-        <p>| UNA VIDA | MCUHAS FORMAS DE VIVIRLA</p>
+        <h1>TITULO</h1>
+        <p>DESCRIPCION</p>
     </header>
 
+    <!-- Barra de Datos en Movimiento Horizontal -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <span class="ticker-item">// SYS.STATUS: ONLINE //</span>
+            <span class="ticker-item">TITULO: DESCRIPCION</span>
+            <span class="ticker-item">// TRANSMISIÓN ACTIVA //</span>
+            <span class="ticker-item">TITULO: DESCRIPCION</span>
+        </div>
+    </div>
+
+    <!-- Menú Reducido a 3 Secciones (Estructura de Enlaces) -->
     <nav>
         <ul>
             <li><a href="index.html" class="active">Inicio</a></li>
-            <li><a href="mente.html">Mente</a></li>
-            <li><a href="conocimiento.html">Conocimiento</a></li>
+            <li><a href="seccion1.html">x</a></li>
+            <li><a href="seccion2.html">x</a></li>
         </ul>
     </nav>
 
-    <div id="main-wrapper">
-        
-        <main>
-            <div class="post">
-                <h2>EL PROPÓSITO:</h2>
-                <div class="post-meta">EN UN INTENTO DE RECUPERAR LA ORIGINALIDAD</div>
-                <p>Un espacio diseñado para registrar los aprendizajes y enseñánzas a lo largo de mi nuestra vida.
-                La meta es demostrar que la originalidad y personalizacion es muy importante en la vida de cada uno de nosotros.
-                Es un area de donde puedes apoyarte en ideas y conocimientos que podrian servirte en tu vida.
-                Es un sitio con una variedad de tematicas de todo tipo que me gustaria compartir y que tu y solo tu tienes la opcion de verlas o no.
-                Toma lo que te sirva, aplicalo en tu vida y crece personalmente. 
-                probablemente no sea para todos. Puede resultar frustrante buscar algo en concreto, pero con ayuda del buscador y pasiencia puedes encontrarlo.
-                La mente es un lugar extenso y muy dificil de entender, ademas de que está siempre en constante evolución.</p>
-                <p style="margin-top: 12px; color: #ff6600; font-weight: bold;">La regla es una: Mostrar lo que conozco de forma unica y perfeccionar con el tiempo.</p>
-            </div>
-        </main>
+    <!-- Sección de Propósito -->
+    <main>
+        <div class="content-block">
+            <h2>TITULO</h2>
+            <p>DESCRIPCION</p>
+        </div>
+    </main>
 
-        <aside>
-            <div class="widget">
-                <h3>ESTADO DE INFRAESTRUCTURA</h3>
-                <p><strong>FASE 01:</strong>Creación de Inicio en nuestra pagina.</p>
-                <p style="margin-top: 10px; color: #fff;">Siguiente paso: Desarrollo de los módulos de contenido.</p>
-            </div>
-        </aside>
-
-    </div>
+    <!-- Cierre Inferior -->
+    <footer>
+        &copy; 2026 // TITULO // SYSTEM
+    </footer>
 
 </div>
 

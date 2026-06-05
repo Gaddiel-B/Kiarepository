@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANUAL URBANO | Bitácora de Desarrollo & Fuerza</title>
+    <title>MANUAL URBANO | Operaciones & Fuerza</title>
     <style>
-        /* --- ESTILOS 2006 / WEB 2.0 --- */
+        /* --- ESTILOS RETRO WEB 2.0 INDUSTRIAL / RUDO (2006) --- */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -13,46 +13,58 @@
         }
 
         body {
-            background-color: #e4e9ed; /* Gris azulado clásico de fondo */
-            font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
-            color: #333333;
+            background-color: #1a1a1a; /* Fondo oscuro industrial */
+            background-image: linear-gradient(#222 1px, transparent 1px), linear-gradient(90deg, #222 1px, transparent 1px);
+            background-size: 20px 20px; /* Efecto cuadrícula sutil de fondo */
+            font-family: "Impact", "Arial Black", sans-serif; /* Fuentes de gran peso para títulos */
+            color: #dddddd;
             font-size: 13px;
-            line-height: 1.6;
         }
 
+        /* Texto general usa tipografía limpia y ultra legible */
+        p, li, span, div {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+        }
+
+        /* Contenedor blindado con ancho fijo */
         #container {
-            width: 950px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            border: 1px solid #999999;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+            width: 960px;
+            margin: 30px auto;
+            background-color: #0f0f0f; /* Negro absoluto de fondo interno */
+            border: 3px double #ff6600; /* Borde doble naranja oxidado */
+            box-shadow: 0px 0px 20px rgba(255, 102, 0, 0.2);
         }
 
-        /* Encabezado con degradado brillante azul de la época */
+        /* Encabezado agresivo y de alto impacto */
         header {
-            background: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-            color: white;
-            padding: 35px 20px;
-            border-bottom: 3px solid #1a446c;
-            text-shadow: 1px 1px 2px #000000;
+            background: linear-gradient(to bottom, #2b2b2b 0%, #141414 50%, #050505 100%);
+            padding: 40px 25px;
+            border-bottom: 4px solid #ff6600;
+            position: relative;
         }
 
         header h1 {
-            font-size: 34px;
-            letter-spacing: -1px;
+            font-family: "Impact", sans-serif;
+            font-size: 48px;
+            color: #ffffff;
+            letter-spacing: 2px;
+            text-shadow: 3px 3px 0px #ff6600;
+            text-transform: uppercase;
         }
 
         header p {
             font-size: 12px;
-            color: #dfefff;
-            font-style: italic;
+            color: #aaaaaa;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
             margin-top: 5px;
+            font-weight: bold;
         }
 
-        /* Barra de navegación estilo pestañas Web 2.0 */
+        /* Menú Táctico / Estructura Ruda */
         nav {
-            background-color: #222222;
-            border-bottom: 1px solid #000000;
+            background: #1f1f1f;
+            border-bottom: 2px solid #333333;
         }
 
         nav ul {
@@ -60,94 +72,120 @@
             display: flex;
         }
 
+        nav ul li {
+            flex: 1;
+            text-align: center;
+        }
+
         nav ul li a {
             display: block;
-            padding: 12px 18px;
+            padding: 14px 10px;
             color: #ffffff;
+            font-family: "Impact", sans-serif;
+            font-size: 15px;
+            letter-spacing: 1px;
             text-decoration: none;
-            font-weight: bold;
-            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
             border-right: 1px solid #333333;
+            background: linear-gradient(to bottom, #2d2d2d 0%, #1b1b1b 100%);
+            transition: all 0.2s ease;
         }
 
+        /* Hover de alta intensidad energética */
         nav ul li a:hover, nav ul li a.active {
-            background-color: #207cca;
-            color: #ffffff;
+            background: #ff6600;
+            color: #000000;
+            text-shadow: none;
+            box-shadow: inset 0px 0px 8px rgba(0,0,0,0.5);
         }
 
-        /* Layout de columnas */
+        /* División de bloques del Layout */
         #main-wrapper {
             display: flex;
+            background-color: #141414;
         }
 
         main {
             flex: 1;
-            padding: 25px;
-            border-right: 1px solid #dddddd;
+            padding: 30px;
+            border-right: 2px dashed #2d2d2d;
         }
 
         aside {
             width: 280px;
-            background-color: #fcfdf7; /* Tono cálido para la barra lateral */
-            padding: 25px;
+            background-color: #0b0b0b;
+            padding: 30px 20px;
         }
 
-        /* Bloques de artículos */
+        /* Bloques de artículos con estilo de contenedor militar o rack */
         .post {
-            background: #ffffff;
-            border: 1px solid #cccccc;
-            padding: 18px;
+            background: #111111;
+            border: 1px solid #333333;
+            border-left: 5px solid #ff6600; /* Detalle de bloque sólido a la izquierda */
+            padding: 20px;
             margin-bottom: 25px;
-            border-radius: 3px;
         }
 
         .post h2 {
-            font-size: 20px;
-            color: #1e5799;
-            border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 6px;
-            margin-bottom: 12px;
+            font-family: "Impact", sans-serif;
+            font-size: 22px;
+            color: #ffffff;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            text-transform: uppercase;
         }
 
         .post-meta {
             font-size: 11px;
-            color: #777777;
-            margin-bottom: 12px;
+            color: #ff6600; /* Naranja para datos de estado */
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
         }
 
-        /* Widgets laterales */
+        .post p {
+            color: #cccccc;
+            line-height: 1.7;
+        }
+
+        /* Widgets Laterales Estilo Panel de Control */
         .widget {
-            background: #ffffff;
-            border: 1px solid #cbd5e1;
-            margin-bottom: 20px;
-            padding: 12px;
-            border-radius: 3px;
+            background: #161616;
+            border: 1px solid #2a2a2a;
+            margin-bottom: 25px;
+            padding: 15px;
         }
 
         .widget h3 {
-            background-color: #222222;
-            color: white;
-            font-size: 11px;
-            padding: 5px 8px;
-            margin: -12px -12px 12px -12px;
+            font-family: "Impact", sans-serif;
+            background-color: #2d2d2d;
+            color: #ff6600;
+            font-size: 13px;
+            padding: 6px 10px;
+            margin: -15px -15px 15px -15px;
+            letter-spacing: 1px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            border-bottom: 1px solid #ff6600;
         }
 
         .widget p {
             font-size: 12px;
-            color: #444444;
+            color: #aaaaaa;
+            line-height: 1.5;
         }
 
+        /* Footer de Cierre Fuerte */
         footer {
-            background-color: #222222;
-            color: #bbbbbb;
+            background-color: #0a0a0a;
+            color: #666666;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             font-size: 11px;
-            border-top: 3px solid #207cca;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-top: 2px solid #222222;
         }
     </style>
 </head>
@@ -155,11 +193,13 @@
 
 <div id="container">
 
+    <!-- Encabezado de Alto Voltaje -->
     <header>
         <h1>MANUAL URBANO</h1>
-        <p>Habilidades, fuerza, criterio y lo que realmente importa aprender.</p>
+        <p>FORJA FÍSICA | CRITERIO PROPIO | DESTREZAS TÁCTICAS</p>
     </header>
 
+    <!-- Menú con Nombres de Poder e Interacción de Alto Contraste -->
     <nav>
         <ul>
             <li><a href="index.html" class="active">Inicio</a></li>
@@ -171,28 +211,31 @@
         </ul>
     </nav>
 
+    <!-- Cuerpo con la estructura de bloques rígidos -->
     <div id="main-wrapper">
         
         <main>
             <div class="post">
-                <h2>Declaración de Principios: ¿Por qué este sitio?</h2>
-                <div class="post-meta">Publicado por Admin | Estado: Activo</div>
-                <p>Bienvenido a Manual Urbano. Este no es un espacio de discursos decorados ni de teorías abstractas. Está pensado para registrar ideas reales sobre cómo construir un mejor criterio, entrenar el cuerpo de forma inteligente, dominar herramientas prácticas y entender el entorno financiero actual.</p>
-                <p style="margin-top: 10px;">La idea es simple: aprender haciendo, documentar lo que funciona y descartar el ruido externo.</p>
+                <h2>DECLARACIÓN DE OPERACIONES: EL PROPÓSITO</h2>
+                <div class="post-meta">// ESTADO: EN CURSO // NÚCLEO PRINCIPAL</div>
+                <p>Este es un espacio diseñado para registrar de forma cruda lo que verdaderamente funciona. Cero discursos decorados, cero teorías abstractas de autoayuda blanda. Aquí documentamos los fundamentos para construir una mentalidad inquebrantable, entrenar pesado bajo principios reales de fuerza, dominar las herramientas del entorno físico y afilar las finanzas sin filtros del exterior.</p>
+                <p style="margin-top: 12px; color: #ff6600; font-weight: bold;">La regla es una: Aprende, ejecuta, domina la destreza y descarta el ruido.</p>
             </div>
         </main>
 
         <aside>
             <div class="widget">
-                <h3>Estado del Proyecto</h3>
-                <p><strong>Fase actual:</strong> Construcción de la base del portal. Próximamente se habilitarán los módulos independientes de guías y descargas clásicas.</p>
+                <h3>ESTADO DE INFRAESTRUCTURA</h3>
+                <p><strong>FASE 01:</strong> Arquitectura base implementada de forma segura bajo tecnología GitHub.</p>
+                <p style="margin-top: 10px; color: #fff;">Siguiente paso: Despliegue de los módulos tácticos de contenido.</p>
             </div>
         </aside>
 
     </div>
 
+    <!-- Cierre del Sitio -->
     <footer>
-        &copy; 2026 Manual Urbano | Publicado mediante GitHub Pages.
+        &copy; 2026 MANUAL URBANO // CONSTRUIDO PARA EL RENDIMIENTO // HOSTED BY GITHUB
     </footer>
 
 </div>

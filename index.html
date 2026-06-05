@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MANUAL URBANO - Guía Práctica para el Día a Día</title>
+    <title>MANUAL URBANO | Bitácora de Desarrollo & Fuerza</title>
     <style>
-        /* --- ESTILOS RETRO WEB 2.0 (ESTILO 2006) --- */
+        /* --- ESTILOS 2006 / WEB 2.0 --- */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -13,33 +13,32 @@
         }
 
         body {
-            background-color: #e4e9ed; /* Fondo gris azulado clásico */
-            font-family: "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            background-color: #e4e9ed; /* Gris azulado clásico de fondo */
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
             color: #333333;
             font-size: 13px;
             line-height: 1.6;
         }
 
-        /* Contenedor principal centrado con ancho fijo (muy de la época) */
         #container {
             width: 950px;
             margin: 20px auto;
             background-color: #ffffff;
             border: 1px solid #999999;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
         }
 
-        /* Encabezado con degradado brillante y reflejo */
+        /* Encabezado con degradado brillante azul de la época */
         header {
             background: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
             color: white;
-            padding: 30px 20px;
+            padding: 35px 20px;
             border-bottom: 3px solid #1a446c;
             text-shadow: 1px 1px 2px #000000;
         }
 
         header h1 {
-            font-size: 32px;
+            font-size: 34px;
             letter-spacing: -1px;
         }
 
@@ -47,13 +46,13 @@
             font-size: 12px;
             color: #dfefff;
             font-style: italic;
+            margin-top: 5px;
         }
 
-        /* Barra de navegación con pestañas */
+        /* Barra de navegación estilo pestañas Web 2.0 */
         nav {
-            background-color: #f0f0f0;
-            border-bottom: 1px solid #cccccc;
-            padding: 0 10px;
+            background-color: #222222;
+            border-bottom: 1px solid #000000;
         }
 
         nav ul {
@@ -63,59 +62,62 @@
 
         nav ul li a {
             display: block;
-            padding: 10px 15px;
-            color: #2989d8;
+            padding: 12px 18px;
+            color: #ffffff;
             text-decoration: none;
             font-weight: bold;
-            border-right: 1px solid #e0e0e0;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-right: 1px solid #333333;
         }
 
-        nav ul li a:hover {
-            background-color: #e0e0e0;
-            color: #1e5799;
+        nav ul li a:hover, nav ul li a.active {
+            background-color: #207cca;
+            color: #ffffff;
         }
 
-        /* Layout de 2 columnas: Principal y Barra Lateral */
+        /* Layout de columnas */
         #main-wrapper {
             display: flex;
         }
 
         main {
             flex: 1;
-            padding: 20px;
-            border-right: 1px solid #eeeeee;
+            padding: 25px;
+            border-right: 1px solid #dddddd;
         }
 
         aside {
             width: 280px;
-            background-color: #f9faec; /* Fondo ligeramente cálido para widgets */
-            padding: 20px;
+            background-color: #fcfdf7; /* Tono cálido para la barra lateral */
+            padding: 25px;
         }
 
-        /* Bloques de contenido estilo post/artículo */
+        /* Bloques de artículos */
         .post {
             background: #ffffff;
-            border: 1px solid #dddddd;
-            border-radius: 4px;
-            padding: 15px;
-            margin-bottom: 20px;
+            border: 1px solid #cccccc;
+            padding: 18px;
+            margin-bottom: 25px;
+            border-radius: 3px;
         }
 
         .post h2 {
-            font-size: 18px;
+            font-size: 20px;
             color: #1e5799;
             border-bottom: 1px solid #e0e0e0;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
         }
 
         .post-meta {
             font-size: 11px;
-            color: #888888;
-            margin-bottom: 10px;
+            color: #777777;
+            margin-bottom: 12px;
         }
 
-        /* Secciones de la barra lateral (Widgets) */
+        /* Widgets laterales */
         .widget {
             background: #ffffff;
             border: 1px solid #cbd5e1;
@@ -125,52 +127,27 @@
         }
 
         .widget h3 {
-            background-color: #207cca;
+            background-color: #222222;
             color: white;
-            font-size: 12px;
-            padding: 4px 8px;
-            margin: -12px -12px 10px -12px;
-            border-radius: 2px 2px 0 0;
-            text-transform: uppercase;
-        }
-
-        .widget ul {
-            list-style: square;
-            padding-left: 18px;
-        }
-
-        .widget ul li {
-            margin-bottom: 5px;
-        }
-
-        .widget ul li a {
-            color: #333;
-            text-decoration: none;
-        }
-
-        .widget ul li a:hover {
-            text-decoration: underline;
-            color: #2989d8;
-        }
-
-        /* Botones de categorías o tags */
-        .badge {
-            background-color: #e0e0e0;
-            padding: 2px 6px;
-            border-radius: 3px;
             font-size: 11px;
-            display: inline-block;
-            margin-right: 5px;
+            padding: 5px 8px;
+            margin: -12px -12px 12px -12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        /* Pie de página */
+        .widget p {
+            font-size: 12px;
+            color: #444444;
+        }
+
         footer {
-            background-color: #333333;
-            color: #cccccc;
+            background-color: #222222;
+            color: #bbbbbb;
             text-align: center;
             padding: 15px;
             font-size: 11px;
-            border-top: 2px solid #207cca;
+            border-top: 3px solid #207cca;
         }
     </style>
 </head>
@@ -178,95 +155,44 @@
 
 <div id="container">
 
-    <!-- Encabezado con la estética de títulos Web 2.0 -->
     <header>
         <h1>MANUAL URBANO</h1>
-        <p>Habilidades, fuerza, finanzas y lo que realmente importa aprender.</p>
+        <p>Habilidades, fuerza, criterio y lo que realmente importa aprender.</p>
     </header>
 
-    <!-- Menú de pestañas superior -->
     <nav>
         <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Entrenamiento</a></li>
-            <li><a href="#">Finanzas</a></li>
-            <li><a href="#">Mecánica/Reparación</a></li>
-            <li><a href="#">Acerca de</a></li>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="hierro-fuerza.html">Hierro & Fuerza</a></li>
+            <li><a href="combustible.html">Combustible</a></li>
+            <li><a href="circulo-interno.html">Círculo Interno</a></li>
+            <li><a href="taller-destrezas.html">Taller de Destrezas</a></li>
+            <li><a href="criterio.html">Criterio</a></li>
         </ul>
     </nav>
 
     <div id="main-wrapper">
         
-        <!-- Columna Izquierda: Contenido Principal -->
         <main>
-            
             <div class="post">
-                <h2>Acondicionamiento Físico: El Poder de los Básicos</h2>
-                <div class="post-meta">Publicado el 4 de Junio, 2026 | Por Admin</div>
-                <p>No necesitas máquinas confusas de última generación. Para construir una base sólida de fuerza y salud, el enfoque debe estar en los movimientos compuestos: Sentadilla, Peso Muerto, Press de Banca y Dominadas. Planifica tu semana, mantén la consistencia y prioriza la sobrecarga progresiva.</p>
-                <div style="margin-top: 10px;">
-                    <span class="badge">Ejercicio</span><span class="badge">Salud</span>
-                </div>
+                <h2>Declaración de Principios: ¿Por qué este sitio?</h2>
+                <div class="post-meta">Publicado por Admin | Estado: Activo</div>
+                <p>Bienvenido a Manual Urbano. Este no es un espacio de discursos decorados ni de teorías abstractas. Está pensado para registrar ideas reales sobre cómo construir un mejor criterio, entrenar el cuerpo de forma inteligente, dominar herramientas prácticas y entender el entorno financiero actual.</p>
+                <p style="margin-top: 10px;">La idea es simple: aprender haciendo, documentar lo que funciona y descartar el ruido externo.</p>
             </div>
-
-            <div class="post">
-                <h2>Relaciones Personales y Entornos Sanos</h2>
-                <div class="post-meta">Publicado el 2 de Junio, 2026 | Por Admin</div>
-                <p>Construir relaciones sanas empieza por establecer límites claros y comunicarte con honestidad. Rodéate de personas que compartan tus valores de crecimiento. Aprender a escuchar activamente y alejarte de entornos desgastantes es vital para tu enfoque mental a largo plazo.</p>
-                <div style="margin-top: 10px;">
-                    <span class="badge">Estilo de Vida</span><span class="badge">Mente</span>
-                </div>
-            </div>
-
-            <div class="post">
-                <h2>Reparaciones Esenciales: Kit de Herramientas Básico</h2>
-                <div class="post-meta">Publicado el 28 de Mayo, 2026 | Por Admin</div>
-                <p>Todo hombre debería saber solucionar problemas básicos en casa sin depender inmediatamente de terceros. Mantén siempre un kit con: juego de destornilladores, pinzas de presión, multímetro para revisar voltajes, llave inglesa y cinta de aislar. Resolver fallas por ti mismo te ahorra dinero y desarrolla pensamiento lógico.</p>
-                <div style="margin-top: 10px;">
-                    <span class="badge">Taller</span><span class="badge">Habilidades</span>
-                </div>
-            </div>
-
         </main>
 
-        <!-- Columna Derecha: Barra Lateral (Sidebar) -->
         <aside>
-            
             <div class="widget">
-                <h3>Categorías Principales</h3>
-                <ul>
-                    <li><a href="#">Fuerza & Nutrición</a></li>
-                    <li><a href="#">Finanzas Personales</a></li>
-                    <li><a href="#">Relaciones y Crecimiento</a></li>
-                    <li><a href="#">Habilidades Prácticas</a></li>
-                </ul>
+                <h3>Estado del Proyecto</h3>
+                <p><strong>Fase actual:</strong> Construcción de la base del portal. Próximamente se habilitarán los módulos independientes de guías y descargas clásicas.</p>
             </div>
-
-            <div class="widget">
-                <h3>Reglas de Oro del Sitio</h3>
-                <p style="font-size: 11px; color: #555;">
-                    1. Invierte en tu aprendizaje.<br>
-                    2. Mantén tu entorno organizado.<br>
-                    3. No escuches opiniones de quienes no conocen el tema.
-                </p>
-            </div>
-
-            <div class="widget">
-                <h3>Archivos</h3>
-                <ul>
-                    <li><a href="#">Junio 2026</a></li>
-                    <li><a href="#">Mayo 2026</a></li>
-                    <li><a href="#">Abril 2026</a></li>
-                </ul>
-            </div>
-
         </aside>
 
     </div>
 
-    <!-- Footer Clásico -->
     <footer>
-        &copy; 2026 Manual Urbano - Creado con código puro. Sitio seguro protegido por GitHub Pages.
+        &copy; 2026 Manual Urbano | Publicado mediante GitHub Pages.
     </footer>
 
 </div>
